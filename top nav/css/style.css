@@ -1,0 +1,265 @@
+﻿.header a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video 
+{
+margin: 0;
+padding: 0;
+border: 0;
+font: inherit;
+font-family: Microsoft Yahei;
+font-size:100%;
+vertical-align:baseline;
+}
+
+.header div{
+display:block;
+}
+
+.header .header-topwrapper{
+width:100%;
+background-color:#f4f4f4;
+min-width:1150px;
+}
+
+.header .header-top{
+width:1150px;
+height:32px;
+line-height:32px;
+margin:0 auto;
+position:relative;
+}
+
+.header .float-left{
+float:left;
+}
+
+.header .leftpart{
+position:relative;
+padding-left:5px;
+padding-right:5px;
+}
+
+.header .icon-hamburger{
+background:url("../images/hamburger.png"),no-repeat;
+width:13px;
+height:11px;
+}
+
+.header [class^=icon-]{
+display:inline-block;
+vertical-align:middle;
+background-repeat:none;
+}
+
+.header .headertext
+{
+color:#000;
+font-size:12px;
+}
+
+.header .products-list{
+position:absolute;
+display:none;
+width:170px;
+left:0;
+top:32px;
+background-color:#f4f4f4;
+padding-top:30px;
+padding-bottom:10px;
+padding-left:20px;
+z-index:18;
+}
+
+.header .products-item{
+height:14px;
+line-height:14px;
+margin-bottom:20px;
+}
+
+.header .products-item a{
+color:#9196a0;
+font-size:14px;
+}
+
+
+
+.header ul,menu,dir{
+display:block;
+list-style-type:disc;
+-webkit-margin-before:1em;
+-webkit-margin-after:1em;
+-webkit-margin-start:0px;
+-webkit-margin-end:0px;
+-webkit-padding-start:40px;
+}
+
+.header  .products-item{
+list-style:none;
+}
+
+.header .tag-list{
+list-style:none;
+margin-top:0;
+}
+
+.header .list-item{
+height:14px;
+line-height:14px;
+margin-bottom:20px;
+}
+
+.header li{
+display:list-item;
+text-align:-webkit-match-parent;
+}
+
+.header a{
+text-decoration:none;
+color:#000;
+}
+
+.header .list-item a{
+color:#9196a0;
+font-size:14px;
+}
+
+.header .rightpart{
+position:absolute;
+right:0;
+top:0;
+}
+
+.header #loginBox a,span, .header .registbar{
+color:#000;
+font-size:12px;
+}
+
+.header .hi{
+color:#8e8e8e;
+font-size:12px;
+}
+
+.header .hi, .header .loginbar, .header .registbar{
+display:inline-block;
+float:left;
+}
+
+.header .registbar{
+margin-left:7px;
+}
+
+.header a: -webkit-any-link{
+color:webkit-link;
+text-decoration:underline;
+cursor:auto;
+}
+
+.header .tag-list-wrapper{
+margin-left:13px;
+float:left;
+}
+
+.header .tag-list{
+margin-left:13px;
+height:34px;
+}
+
+.header .myyoho{
+padding-right:10px;
+position:relative;
+}
+
+.header .tag-item{
+display:inline-block;
+float:left;
+line-height:32px;
+box-sizing:border-box;
+margin-left:-1px;
+}
+
+.header .myyoho .tag-separate{
+margin-left:12px
+}
+
+.header .rightpart .tag-separate{
+border-color:#dcdcdc;
+}
+
+.header .tag-item span{
+display:inline-block;
+}
+
+.header .tag-separate{
+margin-top:11px;
+width:0;
+height:14px;
+display:inline-block;
+float:left;
+border-left:1px solid #dcdcdc;
+}
+
+.header .tag-item a{
+color:#8e8e8e;
+font-size:12px;
+display:inline-block;
+}
+
+.header .icon-bottomarrow{
+background:url("../images/bottomarrow.png"),no-repeat;
+width:10px;
+height:5px;
+margin-top:-2px;
+}
+
+.header .myyoho-info{
+position:absolute;
+display:none;
+top:32px;
+left:-110px;
+width:300px;
+background-color:#f8f8f8;
+z-index:17;
+}
+
+.header .myorder{
+padding-right:10px;
+}
+
+.header .myorder .tag-separate{
+margin-right:11px;
+}
+
+.header .icon-papers{
+background:url("../images/papers.png"),no-repeat;
+width:10px;
+height:14px;
+margin-top:2px;
+}
+
+.header .mycollect{
+padding-right:11px;
+}
+
+.header .mycollect .tag-separate{
+margin-right:11px;
+}
+
+.header .icon-heart{
+background:url("../images/heart.png"),no-repeat;
+width:12px;
+height:11px;
+margin-top:-2px;
+}
+
+.header .message{
+padding-right:10px;
+}
+
+.header .message .tag-separate{
+margin-right:11px;
+}
+
+.header .icon-mail{
+background:url("../images/mail.png"),no-repeat;
+width:16px;
+height:10px;
+margin-top:2px;
+}
