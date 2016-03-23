@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>产品展示</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".prd_img").mouseover(function(){
+		
+		var next_image = $(this).attr("next_image");
+		if(next_image) {
+			$(this).attr("src", $(this).attr("next_image"));
+		} else {
+			var imgsrc = $(this).attr("src");
+			var next_image = imgsrc.replace(/\.(\w*)$/,"_1.$1");
+			$(this).attr("prev_image", imgsrc);
+			$(this).attr("next_image",next_image);
+			$(this).attr("src", next_image);
+		}
+	}).mouseout(function(){
+		$(this).attr("src", $(this).attr("prev_image"));
+	});
+});
+</script>
+</head>
+<body>
+	<div class="prd-wrap">
+		<div class="prd_banner"></div>
+		<div class="prd_nav"><em>商城 / </em><a href="#">Designer</a></div>
+		<div class="prd_filterbar">
+			<ul class="filterul">
+				<li class="subject">女人装</li>
+				<li class="condition-cat">
+					尺寸
+					<div class="condition">
+						<span class="title">尺寸</span>
+						<ul>
+							<li><a href="javascript:void(0)">XXS</a></li>
+							<li><a href="javascript:void(0)">XS</a></li>
+							<li><a href="javascript:void(0)">Sm</a></li>
+							<li><a href="javascript:void(0)">Med</a></li>
+							<li><a href="javascript:void(0)">lg</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="condition-cat">
+					风格
+					<div class="condition">
+						第二个选项卡查询条件
+					</div>
+				</li>
+				<li class="condition-cat"><a class="reset">重新选择</a></li>
+			</ul>
+		</div>
+		<br class="clear" />
+		<div class="prd_content">
+			<div class="prd_leftcat">
+				<span class="title">SHOP BY...</span>
+				<a href="javascript:void(0)" class="newst-prd">最新上架商品<a>
+				<ul>
+					<li><a href="javascript:void(0)">牛仔裤</a></li>
+					<li><a href="javascript:void(0)">孕妇装</a></li>
+					<li><a href="javascript:void(0)">女孩装</a></li>
+					<li><a href="javascript:void(0)">手机</a></li>
+					<li><a href="javascript:void(0)">游戏主机</a></li>
+				</ul>
+				<span class="tagtitle">特定的标签</span>
+				<ul>
+					<li><a href="javascript:void(0)">好玩的</a></li>
+					<li><a href="javascript:void(0)">黑科技</a></li>
+					<li><a href="javascript:void(0)">玩你妹</a></li>
+					<li><a href="javascript:void(0)">新发明</a></li>
+					<li><a href="javascript:void(0)">撩妹用的</a></li>
+				</ul>
+			</div>
+			<div class="prd_list">
+				<ul style="padding-left:190px;">
+					<li class="prd_item">
+						<img  class="prd_img" href="#" src="images/large.jpg" />
+						<span class="brand-name">Liz Lange Maternity for Target</span>
+						<span class="item-title">Sweatshirt</span>
+						<span class="size-name">Size XS (Maternity)</span>
+						<div  class="item-price">
+							<span class="price">$14.49</span>
+							<span class="original-price">$50</span>
+							<a class="add-to-cart">加入购物车</a>
+						</div>
+						<br class="clear" />
+					</li>
+					<li class="prd_item">
+						<img  class="prd_img" href="#" src="images/item2.jpg" />
+						<span class="brand-name">Mimi Maternity</span>
+						<span class="item-title">Silk Dress</span>
+						<span class="size-name">Size S (Maternity)</span>
+						<div  class="item-price">
+							<span class="price">$29.99</span>
+							<span class="original-price">$143</span>
+							<a class="add-to-cart">加入购物车</a>
+						</div>
+						<br class="clear" />
+					</li>
+					<li class="prd_item">
+						<img  class="prd_img" href="#" src="images/item3.jpg" />
+						<span class="brand-name">Sweet Lola</span>
+						<span class="item-title">Two Piece Swimsuit</span>
+						<span class="size-name">Size 6</span>
+						<div  class="item-price">
+							<span class="price">$22.49</span>
+							<span class="original-price">$46</span>
+							<a class="add-to-cart">加入购物车</a>
+						</div>
+						<br class="clear" />
+					</li>
+					<li class="prd_item">
+						<img  class="prd_img" href="#" src="images/large.jpg" />
+						<span class="brand-name">Sam & Libby</span>
+						<span class="item-title">Flats</span>
+						<span class="size-name">Size 8½</span>
+						<div  class="item-price">
+							<span class="price">$10.49</span>
+							<span class="original-price">$36</span>
+							<a class="add-to-cart">加入购物车</a>
+						</div>
+						<br class="clear" />
+					</li>
+					<br class="clear" />
+					<li class="prd_item">
+						<img  class="prd_img" href="#" src="images/large.jpg" />
+						<span class="brand-name">Sam & Libby</span>
+						<span class="item-title">Flats</span>
+						<span class="size-name">Size 8½</span>
+						<div  class="item-price">
+							<span class="price">$10.49</span>
+							<span class="original-price">$36</span>
+							<a class="add-to-cart">加入购物车</a>
+						</div>
+						<br class="clear" />
+					</li>
+					<li class="prd_item">
+						<img  class="prd_img" href="#" src="images/large.jpg" />
+						<span class="brand-name">Sam & Libby</span>
+						<span class="item-title">Flats</span>
+						<span class="size-name">Size 8½</span>
+						<div  class="item-price">
+							<span class="price">$10.49</span>
+							<span class="original-price">$36</span>
+							<a class="add-to-cart">加入购物车</a>
+						</div>
+						<br class="clear" />
+					</li>
+
+				</ul>
+			</div>
+			<br class="clear" />
+		</div>
+		
+	</div>
+</body>
+</html>
