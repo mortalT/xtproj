@@ -1,0 +1,114 @@
+body{
+	height: 360px;
+
+}
+.form .area, .form .itxt, .form .selt {
+	line-height: 18px;
+	border: 1px solid #CCC;
+	padding: 5px;
+	vertical-align: middle;
+	float: none;
+}
+#consignee-form {
+	position: relative;
+	height: 360px;
+}
+.form .item {
+	display: block;
+	padding-bottom: 15px;
+	line-height: 25px;
+}
+.form .item::after {
+	content: ".";
+	display: block;
+	height: 0px;
+	clear: both;
+	visibility: hidden;
+}
+.form .item span.label {
+	float: left;
+	height: 18px;
+	line-height: 18px;
+	padding: 4px 0px 3px;
+	width: 75px;
+	text-align: right;
+}
+.form .itxt {
+	height: 25px;
+	width: 155px;
+	padding: 3px 5px 2px;
+}
+.form .itxt02 {
+	width: 245px;
+}
+#consignee-form .message {
+	display: inline-block;
+}
+#consignee-form .error-msg {
+	display: none;
+}
+.form .error-msg {
+	display: inline-block;
+	height: 28px;
+	line-height: 28px;
+	padding: 0px 10px 0px 30px;
+	vertical-align: middle;
+	color: #E4393C;
+	background: #FFF url(../images/error-ico.png) no-repeat scroll 8px 4px;
+}
+.ftx-03, .ftx03 {
+	color: #999;
+}
+#consignee-form .consignee-tag-info {
+	color: #999;
+	margin-left: 10px;
+}
+#consignee-form .consignee-tag span {
+	border: 1px solid #CCC;
+	border-radius: 1px;
+	padding: 2px 10px;
+	margin: 0px 2px;
+	cursor: pointer;
+}
+#consignee-form .consignee-tag span {
+	border: 1px solid #CCC;
+	border-radius: 1px;
+	padding: 2px 10px;
+	margin: 0px 2px;
+	cursor: pointer;
+}
+#consignee-form .consignee-tag span {
+	border: 1px solid #CCC;
+	border-radius: 1px;
+	padding: 2px 10px;
+	margin: 0px 2px;
+	cursor: pointer;
+}
+#consignee-form .consignee-tag span:hover {
+	color: #E4393C;
+	border: 1px solid #E4393C;
+}
+.consignee-btn-save {
+	font-family: arial,"Microsoft YaHei";
+	display: inline-block;
+	height: 23px;
+	line-height: 23px;
+	background-color: #F2F2F2;
+	background-image: linear-gradient(to top, #F2F2F2 0px, #F7F7F7 100%);
+	border-radius: 3px;
+	color: #323333;
+	font-size: 12px;
+	font-weight: 400;
+	padding: 0px 14px;
+	cursor: pointer;
+	float: none;
+	border: 1px solid #DDD;
+}
+.consignee-btn-save:hover {
+	color: #323333;
+	text-decoration: none;
+	box-shadow: 0px 1px 1px rgba(0, 1, 1, 0.08);
+	background-color: #F7F7F7;
+	background-image: linear-gradient(to top, #F7F7F7 0px, #F2F2F2 100%);
+}
+

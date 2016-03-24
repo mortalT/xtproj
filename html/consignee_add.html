@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>添加收货人信息</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/consignee.css"/>
+		<link rel="stylesheet" type="text/css" href="plugin/city-picker/css/city-picker.css"/>
+	</head>
+	<body>
+		<div class="form" id="consignee-form" name="consignee-form">
+			<div class="item" id="name_div">
+				<span class="label"><span style="color:red">*</span>&nbsp;收货人：</span>
+				<div class="fl">
+					<input id="consignee_form_id" name="consigneeParam.id" value="" type="hidden">
+					<input id="consignee_type" name="consigneeParam.type" value="" type="hidden">
+					<input id="consignee_ceshi1" name="consignee_ceshi1" value="" type="hidden">
+					<input class="itxt" id="consignee_name" name="consigneeParam.name" maxlength="20" value="" type="text">
+					<span class="error-msg" id="name_div_error">请您填写收货人姓名</span>
+				</div>
+			</div>
+			<!-- yanwenqi  全球购添加身份证idCard-->
+			<!-- end -->
+			<div class="item" id="area_div">
+				<span class="label"><span style="color:red">*</span>&nbsp;所在地区：</span>
+				<div class="fl">
+					<!-- 新版地址选择 Start -->
+					<div style="position:relative;width:300px"><!-- container -->
+					  <input readonly type="text" data-toggle="city-picker" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;点击从下拉面板中选择省/市/区" style="width:275px" />
+					</div>
+				</div>
+				<div class="fl">
+					<span class="error-msg" id="jd_area_tab_error"></span>
+					<!-- 新版地址选择  End  -->
+				</div>
+			</div>
+			<div class="item">
+				<span class="label" id="address_div"><span style="color:red">*</span>&nbsp;详细地址：</span>
+				<div class="fl">
+					<!--span id="areaNameTxt"></span-->
+					<input class="itxt itxt02" id="consignee_address" name="consigneeParam.address" maxlength="50" onblur="check_Consignee('address_div')" value="" type="text">
+					<span class="error-msg message" id="address_div_error">请您填写收货人详细地址</span>
+				</div>
+			</div>
+			<div class="item" id="call_div">
+				<span class="label"><span style="color:red">*</span>&nbsp;手机号码：</span>
+				<div class="fl">
+					<input class="itxt " id="consignee_mobile" name="consigneeParam.mobile" onblur="check_Consignee('call_mobile_div')" onfocus="if(value == defaultValue){value='';}" maxlength="11" value="" type="text">
+				</div>
+				<div class="fl">
+					<span class="label">固定电话：</span>
+					<input class="itxt " id="consignee_phone" name="consigneeParam.phone" onblur="check_Consignee('call_phone_div')" onfocus="if(value == defaultValue){value='';}" maxlength="20" value="" type="text">
+				</div>
+				<span class="error-msg message" id="call_div_error">请您填写收货人手机号码</span>
+			</div>
+			<div class="item" id="email_div">
+				<span class="label">邮箱：</span>
+				<div class="fl">
+					<input class="itxt" id="consignee_email" name="consigneeParam.email" maxlength="50" onblur="check_Consignee('email_div')" value="" onfocus="if(value == defaultValue){value='';}" type="text">
+					<span class="error-msg" id="email_div_error">邮箱格式不正确</span>
+					<div class="ftx-03">用来接收订单提醒邮件，便于您及时了解订单状态</div>
+				</div>
+			</div>
+			<div class="item" id="alias_div">
+				<span class="label">地址别名：</span>
+				<div class="fl">
+					<input id="consignee_addressName_old" maxlength="20" value="" type="hidden">
+					<input class="itxt" id="consignee_addressName" name="consigneeParam.addressName" maxlength="20" onblur="check_Consignee('alias_div')" value="" type="text">
+					<span class="error-msg" id="alias_div_error"></span>
+					<span class="consignee-tag-info">建议填写常用名称</span>
+				</div>
+				<div class="consignee-tag fl">
+					<span onclick="javascript:setEditAddressAilas('home');" id="home">家里</span>
+					<span onclick="javascript:setEditAddressAilas('parentHome');" id="parentHome">父母家</span>
+					<span onclick="javascript:setEditAddressAilas('company');" id="company">公司</span>
+				</div>
+			</div>
+			<div class="item">
+				<span class="label">&nbsp;</span>
+				<div class="fl">
+					<a href="#none" class="consignee-btn-save" onclick="save_Consignee()"><span id="saveConsigneeTitleDiv">保存收货人信息</span></a>
+					<div class="loading loading-1" style="display:none"><b></b>正在提交信息，请等待！</div>
+					<!--a href="#none" class="consignee-btn-save ml10">取消</a-->
+				</div>
+				<div style="display:none"><input id="consignee_form_reset" name="" type="reset"></div>
+			</div>
+
+			<!--yanwenqi 全球购添加身份证号下面-->
+			<!--end-->
+		</div>
+		<script type="text/javascript">
+			
+		</script>
+		<script src="js/jquery.min.js"></script><!-- jQuery is required -->
+		<script src="plugin/city-picker/js/city-picker.data.min.js"></script>
+		<script src="plugin/city-picker/js/city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

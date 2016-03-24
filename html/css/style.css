@@ -1,0 +1,37 @@
+@charset "utf-8"; /* CSS Document */
+
+/* reset 公共重置样式 */
+*{box-sizing:border-box}
+html { -webkit-text-size-adjust: none; }
+html, body { height: 100%; }
+body {font: 12px/1.5; font-family: "Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","黑体",sans-serif; }
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu{margin:0;padding:0}
+h1, h2, h3, h4, h5 { font-weight: 400; }
+li{list-style:none}
+embed, input, select, textarea, button { font: 12px/1.5 arial, 'Microsoft Yahei', sans-serif; vertical-align: middle; }
+textarea { resize: none; }
+address { display: inline; font-style: normal; }
+em { font-style: normal; }
+.clear { clear: both; }
+.clearfix { *zoom:1;}
+.clearfix:after { clear: both; content: ""; display: block; }
+p { font-size: 14px; }
+a { text-decoration: none; color:#4A4A4A}
+a:hover{color:#000;}
+img{ border: none; }
+.center{text-align:center;}
+.fl{float:left;}
+.fr{float: right;}
+.mr10{margin-right: 10x;}
+.hide{display: none;}
+.show{display: block;}
+.hidex{	visibility: hidden;}
+.showx{	visibility: visible;}
+/* reset 公共重置样式 End */
+
+
+
+
+
+
+
