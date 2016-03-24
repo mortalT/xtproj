@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>订单界面</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/order.css"/>
+	</head>
+
+	<body>
+		<!--
+        	作者：ezreal
+        	时间：2016-03-23
+        	描述：包含头部信息
+        -->
+		<div class="ord-wrap w">
+			<div class="ord-header clearfix">
+				<div id="logo">
+					<a href="http://www.jd.com/" class="link1" target="_blank">
+						<img src="images/logo.png" alt="京东商城" />
+					</a>
+					<a href="#none" class="order-page"><b></b></a>
+				</div>
+				<div class="stepflex" id="#sflex03">
+					<dl class="first done">
+						<dt class="s-num">1</dt>
+						<dd class="s-text">1.我的购物车<s></s><b></b></dd>
+					</dl>
+					<dl class="normal doing">
+						<dt class="s-num">2</dt>
+						<dd class="s-text">2.填写核对订单信息<s></s><b></b></dd>
+					</dl>
+					<dl class="normal last">
+						<dt class="s-num">3</dt>
+						<dd class="s-text">3.成功提交订单<s></s><b></b></dd>
+					</dl>
+				</div>
+			</div>
+			<div id="container">
+				<div id="ord-content">
+					<div class="ord-info">
+						<span class="title">填写并核对订单信息</span>
+						<div id="consignee-info">
+							<div class="ord-steps-title">
+								<h3>收货人信息</h3>
+								<a href="#add" class="ord-linkbtn fr">新增收货地址</a>
+							</div>
+							<div class="ord-steps-cnt">
+								<ul class="consignee-list clearfix">
+									<li>
+										<div class="consignee-item consignee-item-selected"><span>伊泽瑞尔</span><b></b></div>
+										<div class="addr-detail">
+											<span class="addr-name">伊泽瑞尔</span>
+											<span class="addr-info">北京 海淀区 五环到六环之间 北京市海淀区上地十街辉煌国际东6号楼462</span>
+											<span class="addr-tel">18616343066</span>
+											<span class="addr-default showlast">默认地址</span>
+										</div>
+										<div class="addr-op">
+											<a href="#note" class="ord-linkbtn consignee-btn-default hidelast">设为默认地址</a>
+											<a href="#note" class="ord-linkbtn consignee-btn-edit">编辑</a>
+											<a href="#note" class="ord-linkbtn consignee-btn-del">删除</a>
+										</div>
+									</li>
+									<li class="hide">
+										<div class="consignee-item"><span>无双剑姬</span><b></b></div>
+										<div class="addr-detail">
+											<span class="addr-name">无双剑姬</span>
+											<span class="addr-info">河北 石家庄市 桥西区 槐安西路95号恒华假日酒店2楼8219</span>
+											<span class="addr-tel">18616343066</span>
+											<span class="addr-default hidelast">默认地址</span>
+										</div>
+										<div class="addr-op">
+											<a href="#note" class="ord-linkbtn consignee-btn-default ">设为默认地址</a>
+											<a href="#note" class="ord-linkbtn consignee-btn-edit">编辑</a>
+											<a href="#note" class="ord-linkbtn consignee-btn-del">删除</a>
+										</div>
+									</li>
+									<li class="hide">
+										<div class="consignee-item"><span>泰隆</span><b></b></div>
+										<div class="addr-detail">
+											<span class="addr-name">泰隆</span>
+											<span class="addr-info">上海 浦东新区 张江镇 古桐路69弄</span>
+											<span class="addr-tel">18616343066</span>
+											<span class="addr-default hidelast">默认地址</span>
+										</div>
+										<div class="addr-op">
+											<a href="#note" class="ord-linkbtn consignee-btn-default">设为默认地址</a>
+											<a href="#note" class="ord-linkbtn consignee-btn-edit">编辑</a>
+											<a href="#note" class="ord-linkbtn consignee-btn-del">删除</a>
+										</div>
+									</li>
+								</ul>
+								<div class="addr-more">
+									<a href="javascript:void(0)" class="addr-more-linkbtn">更多地址<b></b></a>
+									<!--<a href="javascript:void(0)" class="addr-hide hide">收起地址</a>
+									<a href="javascript:void(0)" class="addr-show">更多地址</a>-->
+								</div>
+							</div>
+						</div>
+						<div class="line"></div>
+						<div id="pay-info">
+							<div class="ord-steps-title">
+								<h3>支付方式</h3>
+							</div>
+							<div class="ord-steps-cnt clearfix">
+								<ul class="payment-list">
+									<li>
+										<div class="payment-item payment-item-selected">支付宝支付<b></b></div>
+									</li>
+									<li>
+										<div class="payment-item">微信支付<b></b></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="line"></div>
+						<div class="goodslist-info">
+							<div class="ord-steps-title">
+								<h3>送货清单</h3>
+							</div>
+							<div class="ord-steps-cnt">
+								<div id="goods-list" class="goods-list">
+									<h4 class="goods-tit">商家：英雄联盟</h4>
+									<ul class="clearfix">
+										<li class="goods-item">
+											<a href="http://item.jd.com/407901.html"><img src="images/feike.jpg" /></a>
+											<div class="goods-detial-item">
+												<div class="gname">
+													<a href="http://item.jd.com/407901.html" target="_blank">飞科(FLYCO)FH6251可折叠电吹风机 1500W  </a>
+												</div>
+												<div class="gprice">
+													<strong>￥59.00</strong>
+													<span class="gnum">x1</span>
+													<span id="pre-state" class="gstate" skuid="407901">有货</span>
+												</div>
+											</div>
+										</li>
+										<li class="goods-item">
+											<a href="http://item.jd.com/1015092.html"><img src="images/cz.jpg" /></a>
+											<div class="goods-detial-item">
+												<div class="gname">
+													<a href="http://item.jd.com/1015092.html" target="_blank">先科(SAST) 车载充电器 一拖三点烟器一分三 车充一拖二USB 汽车充电器 独立开关 T11白色	</a>
+												</div>
+												<div class="gprice">
+													<strong>￥36.00</strong>
+													<span class="gnum">x1</span>
+													<span id="pre-state" class="gstate" skuid="407901">有货</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div style="display: block;" class="order-remarks hide" id="orderRemarkItem">
+							<div class="remark-tit">添加订单备注</div>
+							<div id="remarkId" style="margin-bottom:7px">
+								<div class="form remark-cont"> <input style="color: rgb(204, 204, 204);" id="remarkText" maxlength="40" size="15"  placeholder="限40个字（定制类商品，请将购买需求在备注中做详细说明）" onblur="if(this.value==''||this.value=='限40个字（定制类商品，请将购买需求在备注中做详细说明）'){this.value='限40个字（定制类商品，请将购买需求在备注中做详细说明）';this.style.color='#cccccc'}"
+										onfocus="if(this.value=='限40个字（定制类商品，请将购买需求在备注中做详细说明）') {this.value='';};this.style.color='#000000';" type="text"> <span class="ftx-03 ml10">&nbsp;&nbsp;提示：请勿填写有关支付、收货、发票方面的信息</span> </div>
+							</div>
+						</div>
+						<div class="line"></div>
+						<div class="invoice-info">
+							<div class="ord-steps-title">
+								<h3>发票信息</h3>
+							</div>
+							<div class="ord-steps-cnt">
+								<div id="part-inv" class="invoice-cont">
+									<span class="mr10"> 普通发票（纸质） &nbsp; </span><span class="mr10"> 岳阳三鼎清美软件培训技术学校 
+								        &nbsp; </span><span class="mr10"> 办公用品
+								        &nbsp; </span>
+									<a href="#none" class="ord-linkbtn">修改</a>
+								</div>
+							</div>
+						</div>
+						<div class="line"></div>
+						<div class="coupon-info">
+						</div>
+					</div>
+					<div class="order-summary clearfix">
+						<div class="statistic fr">
+							<div class="list">
+								<span><em style="color: #E4393C;">3</em> 件商品，总商品金额：</span>
+								<em v="124" class="price" id="warePriceId">￥124.00</em>
+							</div>
+							<!--<div class="list">
+								<span>返现：</span>
+								<em v="0" class="price" id="cachBackId"> -￥0.00</em>
+							</div>-->
+							<div class="list">
+								<span><i class="freight-icon"></i>运费：</span>
+								<em class="price" id="freightPriceId"><font color="#000000"> ￥0.00</font></em>
+							</div>
+							<div class="list">
+								<span>应付总额：</span>
+								<em class="price" id="sumPayPriceId">￥124.00</em>
+							</div>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="trade-foot clearfix">
+						<div class="consignee-foot">
+							<p>寄送至： 北京 海淀区 五环到六环之间 北京市海淀区上地十街辉煌国际东6号楼462</p>
+							<p>收货人：廖森枝 186****3066</p>
+						</div>
+						<div class="trade-op">
+							<button type="submit" class="checkout-submit" id="order-submit">
+								提交订单<b></b>
+							</button>
+							<span class="total">应付总额：<strong id="payPriceId">￥124.00</strong></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--
+        	作者：ezreal
+        	时间：2016-03-23
+        	描述：服务信息
+        -->
+		<!--
+        	作者：ezreal
+        	时间：2016-03-23
+        	描述：包含尾部信息
+        -->
+        <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/order.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
