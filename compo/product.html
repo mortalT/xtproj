@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<title>TXT | 商品列表页面</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	<!--
+    $('#lpfl').mouseover(function(){
+		$('.products-list').css('display','inline-block');
+			$('#lpfl').mouseout  (function(){
+		$('.products-list').hide();
+		})
+	})
+   -->
+	$('.yohogroup').mouseover(function(){
+		$(this).css('color','#000')})
+			$('.yohogroup').mouseout(function(){
+		$(this).css('color','#9196a0')})
+
+})
+</script>
+    <script>
+        $(function(){
+            $(".prd_img").mouseover(function(){
+
+                var next_image = $(this).attr("next_image");
+                if(next_image) {
+                    $(this).attr("src", $(this).attr("next_image"));
+                } else {
+                    var imgsrc = $(this).attr("src");
+                    var next_image = imgsrc.replace(/\.(\w*)$/,"_1.$1");
+                    $(this).attr("prev_image", imgsrc);
+                    $(this).attr("next_image",next_image);
+                    $(this).attr("src", next_image);
+                }
+            }).mouseout(function(){
+                $(this).attr("src", $(this).attr("prev_image"));
+            });
+        });
+    </script>
+<script type="text/javascript">
+    function dropshow(){
+        $('.products-list').css('display','block');
+    }
+    function drophide(){
+        $('.products-list').css('display','none');
+    }
+</script>
+    <script type="text/javascript">
+        function select(s,t){
+            $("#photodisplay")[0].src=s;
+            $('.itm-thumbnail-selected')[0].className="itm-thumbnail";
+            $('#'+t)[0].className="itm-thumbnail-selected";
+
+
+            var id = $('.itm-thumbnail-selected').attr('id');
+            var idNum = id.charAt(id.length - 1);
+            var p = 'images/retina' + idNum + '.jpg';
+            $("#retinaphoto")[0].href = (p);
+        }
+    </script>
+</head>
+
+<body>
+<div class="header">
+        <div class="header-topwrapper">
+            <div class="header-top">
+                <div id="dropcontrol" onmouseover="dropshow()" onmouseout="drophide()">
+                <div id="lpfl" class="leftpart float-left">
+                    <span class="icon-hamburger"></span>
+                    <a href="" class="headertext" >TXT</a>
+                    <ul id="prolist" class="products-list" >
+                        <li class="products-item">
+                            <a href="" class="yohogroup" en="TXT1" cn="Mortal1">TXT1</a>
+                        </li>
+                        <li class="products-item">
+                            <a href="" class="yohogroup" en="TXT2" cn="Mortal2">TXT2</a>
+                        </li>
+                        <li class="products-item">
+                            <a href="" class="yohogroup" en="TXT3" cn="Mortal3">TXT3</a>
+                        </li>
+                        <li class="products-item">
+                            <a href="" class="yohogroup" en="TXT4" cn="Mortal4">TXT4</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                <div class="rightpart">
+                    <div id="loginBox" class="float-left">
+                        <span class="hi">Hi~</span>
+                        <a href="" class="loginbar">[请登录]</a>
+                        <a href="" class="registbar">[免费注册]</a>
+                    </div>
+                    <div class="tag-list-wrapper">
+                        <ul class="tag-list">
+                            <li class="tag-item myyoho" id="myYohoBox">
+                                <span class="tag-seprate"></span>
+                                <a href="">MY TXT</a>
+                                <span class="icon-bottomarrow"></span>
+                                <div class="myyoho-info"></div>
+                            </li>
+                            <li class="tag-item myorder">
+                                <span class="tag-seprate"></span>
+                                <span class="icon-papers"></span>
+                                <a href="">我的订单</a>
+                            </li>
+                            <li class="tag-item mycollect">
+                                <span class="tag-seprate"></span>
+                                <span class="icon-heart"></span>
+                                <a href="">我的收藏</a>
+                            </li>
+                            <li class="tag-item message">
+                                <span class="tag-seprate"></span>
+                                <span class="icon-mail"></span>
+                                <a href="">消息</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="top-second-nav">
+    <div class="tnav-logocontainer">
+        <a class="tnav-logo" href="/" id="tnav_logo"></a>
+        <div class="tnav-search">
+            <div class="tnav-searcharea" id="tnav_searcharea">
+                <div class="tnav-search input free-search">
+                    <input class="search-input" data-department="department" data-original_search="search" placeholder="Search 各种各样的东西" type="text">
+                    <ul class="search-ul-results"></ul>
+                    <span class="icon-small-search"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tnav-navigation" id="tnav_navigation">
+        <div class="tnav-nav-tabcontainer">
+            <div class="tnav-tab">
+                <div class="tnav-tablink hide" data-tab_name=".women" data-tab_url="/"></div>
+                <div class="tnav-onetab">
+                    <a href="#" title="Shop Women">EZREAL</a>
+                </div>
+            </div>
+            <div class="tnav-tab">
+                <div class="tnav-tablink hide" data-tab_name=".designers" data-tab_url="/"></div>
+                <div class="tnav-onetab">
+                    <a href="#" title="Designer Brands">TWISTED FATE</a>
+                </div>
+            </div>
+            <div class="tnav-tab">
+                <div class="tnav-tablink hide" data-tab_name=".plus" data-tab_url="/"></div>
+                <div class="tnav-onetab">
+                    <a href="#" title="Shop Women">ORIANNA</a>
+                </div>
+            </div>
+            <div class="tnav-tab">
+                <div class="tnav-tablink hide" data-tab_name=".women2" data-tab_url="/"></div>
+                <div class="tnav-onetab">
+                    <a href="#" title="Shop Women">THRESH</a>
+                </div>
+            </div>
+            <div class="tnav-tab">
+                <div class="tnav-tablink hide" data-tab_name=".women3" data-tab_url="/"></div>
+                <div class="tnav-onetab">
+                    <a href="#" title="Shop Women">LUCIAN</a>
+                </div>
+            </div>
+            <div class="tnav-tab">
+                <div class="tnav-tablink hide" data-tab_name=".women4" data-tab_url="/"></div>
+                <div class="tnav-onetab">
+                    <a href="#" title="Shop Women">POPPY</a>
+                </div>
+            </div>
+            <div class="tnav-tab">
+                <div class="tnav-tablink hide" data-tab_name=".women5" data-tab_url="/"></div>
+                <div class="tnav-onetab">
+                    <a href="#" title="Shop Women">ZED</a>
+                </div>
+            </div>
+            <div class="tnav-tab">
+                <div class="tnav-tablink hide" data-tab_name=".sell" data-tab_url="/"></div>
+                <div class="tnav-onetab-sell">
+                    <a href="#" title="Shop Women">SELL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="prd-wrap">
+    <div class="prd_banner"></div>
+    <div class="prd_nav"><em>商城 / </em><a href="#">Designer</a></div>
+    <div class="prd_filterbar">
+        <ul class="filterul">
+            <li class="subject">女人装</li>
+            <li class="condition-cat">
+                尺寸
+                <div class="condition">
+                    <span class="title">尺寸</span>
+                    <ul>
+                        <li><a href="javascript:void(0)">XXS</a></li>
+                        <li><a href="javascript:void(0)">XS</a></li>
+                        <li><a href="javascript:void(0)">Sm</a></li>
+                        <li><a href="javascript:void(0)">Med</a></li>
+                        <li><a href="javascript:void(0)">lg</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="condition-cat">
+                风格
+                <div class="condition">
+                    第二个选项卡查询条件
+                </div>
+            </li>
+            <li class="condition-cat"><a class="reset">重新选择</a></li>
+        </ul>
+    </div>
+    <br class="clear" />
+    <div class="prd_content">
+        <div class="prd_leftcat">
+            <span class="title">SHOP BY...</span>
+            <a href="javascript:void(0)" class="newst-prd">最新上架商品<a>
+                <ul>
+                    <li><a href="javascript:void(0)">牛仔裤</a></li>
+                    <li><a href="javascript:void(0)">孕妇装</a></li>
+                    <li><a href="javascript:void(0)">女孩装</a></li>
+                    <li><a href="javascript:void(0)">手机</a></li>
+                    <li><a href="javascript:void(0)">游戏主机</a></li>
+                </ul>
+                <span class="tagtitle">特定的标签</span>
+                <ul>
+                    <li><a href="javascript:void(0)">好玩的</a></li>
+                    <li><a href="javascript:void(0)">黑科技</a></li>
+                    <li><a href="javascript:void(0)">玩你妹</a></li>
+                    <li><a href="javascript:void(0)">新发明</a></li>
+                    <li><a href="javascript:void(0)">撩妹用的</a></li>
+                </ul>
+        </div>
+        <div class="prd_list">
+            <ul style="padding-left:190px;">
+                <li class="prd_item">
+                    <img  class="prd_img" href="#" src="images/large.jpg" />
+                    <span class="brand-name">Liz Lange Maternity for Target</span>
+                    <span class="item-title">Sweatshirt</span>
+                    <span class="size-name">Size XS (Maternity)</span>
+                    <div  class="item-price">
+                        <span class="price">$14.49</span>
+                        <span class="original-price">$50</span>
+                        <a class="add-to-cart">加入购物车</a>
+                    </div>
+                    <br class="clear" />
+                </li>
+                <li class="prd_item">
+                    <img  class="prd_img" href="#" src="images/item2.jpg" />
+                    <span class="brand-name">Mimi Maternity</span>
+                    <span class="item-title">Silk Dress</span>
+                    <span class="size-name">Size S (Maternity)</span>
+                    <div  class="item-price">
+                        <span class="price">$29.99</span>
+                        <span class="original-price">$143</span>
+                        <a class="add-to-cart">加入购物车</a>
+                    </div>
+                    <br class="clear" />
+                </li>
+                <li class="prd_item">
+                    <img  class="prd_img" href="#" src="images/item3.jpg" />
+                    <span class="brand-name">Sweet Lola</span>
+                    <span class="item-title">Two Piece Swimsuit</span>
+                    <span class="size-name">Size 6</span>
+                    <div  class="item-price">
+                        <span class="price">$22.49</span>
+                        <span class="original-price">$46</span>
+                        <a class="add-to-cart">加入购物车</a>
+                    </div>
+                    <br class="clear" />
+                </li>
+                <li class="prd_item">
+                    <img  class="prd_img" href="#" src="images/large.jpg" />
+                    <span class="brand-name">Sam & Libby</span>
+                    <span class="item-title">Flats</span>
+                    <span class="size-name">Size 8½</span>
+                    <div  class="item-price">
+                        <span class="price">$10.49</span>
+                        <span class="original-price">$36</span>
+                        <a class="add-to-cart">加入购物车</a>
+                    </div>
+                    <br class="clear" />
+                </li>
+                <br class="clear" />
+                <li class="prd_item">
+                    <img  class="prd_img" href="#" src="images/large.jpg" />
+                    <span class="brand-name">Sam & Libby</span>
+                    <span class="item-title">Flats</span>
+                    <span class="size-name">Size 8½</span>
+                    <div  class="item-price">
+                        <span class="price">$10.49</span>
+                        <span class="original-price">$36</span>
+                        <a class="add-to-cart">加入购物车</a>
+                    </div>
+                    <br class="clear" />
+                </li>
+                <li class="prd_item">
+                    <img  class="prd_img" href="#" src="images/large.jpg" />
+                    <span class="brand-name">Sam & Libby</span>
+                    <span class="item-title">Flats</span>
+                    <span class="size-name">Size 8½</span>
+                    <div  class="item-price">
+                        <span class="price">$10.49</span>
+                        <span class="original-price">$36</span>
+                        <a class="add-to-cart">加入购物车</a>
+                    </div>
+                    <br class="clear" />
+                </li>
+
+            </ul>
+        </div>
+        <br class="clear" />
+    </div>
+
+</div>
+
+<div class="footer">
+
+    <div class="footerbottom">
+        <div class="promise">
+            <div class="center-content clearfix">
+                <div class="left">
+                    <span class="iconfont rgbf">&#xe62f;</span>
+                    <span class="red">100%</span>
+                    <span class="rgbf">品牌授权正品</span>
+                </div>
+                <div class="left">
+                    <span class="iconfont rgbf">&#xe630;</span>
+                    <span class="red">7天</span>
+                    <span class="rgbf">无理由退换货</span>
+                </div>
+                <div class="right">
+                    <span class="iconfont rgbf">&#xe61c;</span>
+                    <span class="rgbf">客服电话：</span>
+                    <span class="red">888-888-9888</span>
+                    &nbsp;&nbsp;
+                    <span class="rgb9">08:88-88:88(周一至周日)</span>
+                    &nbsp;&nbsp;
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-help">
+            <div class="center-content clearfix">
+                <div class="left">
+                    <ul class="clearfix">
+
+                        <li class="left">
+                            <p>
+                                <span>使用指南</span>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">注册登录</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">选购商品</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">结算支付</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">收货退货</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <p>
+                                <span>会员中心</span>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">我的订单</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">我的收藏</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">信息管理</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">账户管理</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <p>
+                                <span>寄售指南</span>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">如何寄售</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">收货方式</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">定价上架</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">闲置变现</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <p>
+                                <span>配送方式</span>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">配送时间</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">配送范围</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">顺丰速运</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">商品验收与签收</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <p>
+                                <span>售后服务</span>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">退换货</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">退款政策</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">中止寄售</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">投诉建议</a>
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-link">
+            <div class="center-content clearfix">
+
+                <div class="left about-us">
+                    <p>
+                        <a href="">返回首页</a>
+                        <span>|</span>
+                        <a href="">公司概况</a>
+                        <span>|</span>
+                        <a href="">联系我们</a>
+                        <span>|</span>
+                        <a href="">加入我们</a>
+                        <span>|</span>
+                        <a href="">商务合作</a>
+                        <span>|</span>
+                        <a href="">隐私条款</a>
+                        <span>|</span>
+                        <a href="">友情链接</a>
+                    </p>
+                    <p>
+                        CopyRight ? 2016-2016 北京灵悦天下科技有限公司
+                        <a class="rbg6" href="http://www.miibeian.gov.cn/" target="_blank">京ICP证8888888号 京ICP备8888889号</a>
+                        经营许可证编号：京88-8888-88
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="return-top hide">
+        <span class="iconfont">&#xe610;</span>
+    </div>
+</div>
+</body>
