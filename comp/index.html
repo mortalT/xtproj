@@ -1,0 +1,344 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TXTBaba | 主页</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$(".index-image").mouseover(function(){
+				$(this).attr("style","border:1px solid #d8d8d8");
+				var next_image = $(this).attr("next_image");
+				if(next_image) {
+					$(this).attr("src", $(this).attr("next_image"));
+				} else {
+					var imgsrc = $(this).attr("src");
+					var next_image = imgsrc.replace(/\.(\w*)$/,"_1.$1");
+					$(this).attr("prev_image", imgsrc);
+					$(this).attr("next_image",next_image);
+					$(this).attr("src", next_image);
+				}
+			}).mouseout(function(){
+				$(this).attr("style","border:1px solid #ffffff");
+				$(this).attr("src", $(this).attr("prev_image"));
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			<!--
+            $('#lpfl').mouseover(function(){
+                $('.products-list').css('display','inline-block');
+                    $('#lpfl').mouseout  (function(){
+                $('.products-list').hide();
+                })
+            })
+           -->
+			$('.yohogroup').mouseover(function(){
+				$(this).css('color','#000')})
+			$('.yohogroup').mouseout(function(){
+				$(this).css('color','#9196a0')})
+
+		})
+	</script>
+	<script type="text/javascript">
+		function dropshow(){
+			$('.products-list').css('display','block');
+		}
+		function drophide(){
+			$('.products-list').css('display','none');
+		}
+	</script>
+
+</head>
+
+<body>
+<div class="header">
+	<div class="header-topwrapper">
+		<div class="header-top">
+			<div id="dropcontrol" onmouseover="dropshow()" onmouseout="drophide()">
+				<div id="lpfl" class="leftpart float-left">
+					<span class="icon-hamburger"></span>
+					<a href="" class="headertext" >TXT</a>
+					<ul id="prolist" class="products-list" >
+						<li class="products-item">
+							<a href="" class="yohogroup" en="TXT1" cn="Mortal1">Dominating</a>
+						</li>
+						<li class="products-item">
+							<a href="" class="yohogroup" en="TXT2" cn="Mortal2">Godlike</a>
+						</li>
+						<li class="products-item">
+							<a href="" class="yohogroup" en="TXT3" cn="Mortal3">Legendary</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="rightpart">
+				<div id="loginBox" class="float-left">
+					<span class="hi">Hi~</span>
+					<a href="login.html" class="loginbar">[请登录]</a>
+					<a href="register.html" class="registbar">[免费注册]</a>
+				</div>
+				<div class="tag-list-wrapper">
+					<ul class="tag-list">
+						<li class="tag-item myyoho" id="myYohoBox">
+							<span class="tag-seprate"></span>
+							<a href="user_center">MY TXT</a>
+							<span class="icon-bottomarrow"></span>
+							<div class="myyoho-info"></div>
+						</li>
+						<li class="tag-item myorder">
+							<span class="tag-seprate"></span>
+							<span class="icon-papers"></span>
+							<a href="">我的订单</a>
+						</li>
+						<li class="tag-item mycollect">
+							<span class="tag-seprate"></span>
+							<span class="icon-heart"></span>
+							<a href="">我的收藏</a>
+						</li>
+						<li class="tag-item message">
+							<span class="tag-seprate"></span>
+							<span class="icon-mail"></span>
+							<a href="">消息</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="top-second-nav">
+	<div class="tnav-logocontainer">
+		<a class="tnav-logo" href="index.html" id="tnav_logo"></a>
+		<div class="tnav-search">
+			<div class="tnav-searcharea" id="tnav_searcharea">
+				<div class="tnav-search input free-search">
+					<input class="search-input" data-department="department" data-original_search="search" placeholder="Search 各种各样的东西" type="text">
+					<ul class="search-ul-results"></ul>
+					<span class="icon-small-search"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tnav-navigation" id="tnav_navigation">
+        <div class="tnav-nav-tabcontainer">
+                <div class="tnav-onetab">
+                    <a href="product.html" title="提款姬">LEBLANC</a>
+                </div>
+                <div class="tnav-onetab">
+                    <a href="product.html" title="托儿索">YASUO</a>
+                </div>
+                <div class="tnav-onetab">
+                    <a href="product.html" title="小学僧">LEE SIN</a>
+                </div>
+                <div class="tnav-onetab">
+                    <a href="product.html" title="喜之螂">KHA'ZIX</a>
+                </div>
+                <div class="tnav-onetab">
+                    <a href="product.html" title="橡皮妮">ANNIE</a>
+                </div>
+                <div class="tnav-onetab">
+                    <a href="product.html" title="董存锐">RIVEN</a>
+                </div>
+                <div class="tnav-onetab">
+                    <a href="product.html" title="儿童劫">ZED</a>
+                </div>
+				<div class="tnav-onetab">
+                    <a href="product.html" title="钙中盖">GAREN</a>
+                </div>
+			<div class="tnav-tab-sell">
+                <div class="tnav-onetab-sell">
+                    <a href="#" title="卖队友" style="color:#00b285;")>SELL</a>
+                </div>
+                <div class="tnav-onetab-sell">
+                    <a href="index.html" title="中推">MID OPEN!</a>
+                </div>
+			</div>
+        </div>
+	</div>
+</div>
+
+<div class="container">
+    <div class="login_div">
+        <div class="login_div_1"><h2><a href="">Deal.com</a></h2></div>
+        <div class="login_div_2"><span>使用第三方账号登录</span></div>
+        <div class="login_div_row">
+            <div class="login_div_3"><a href=""><img src="images/alipay.jpg" width="30px" height="30px"></a></div>
+            <div class="login_div_4"><a href=""><img src="images/qq.jpg" width="30px" height="30px"></a></div>
+            <div class="login_div_5"><a href=""><img src="images/weichat.jpg" width="30px" height="30px"></a></div>
+            <div class="login_div_weibo"><a href=""><img src="images/weibo.gif" width="30px" height="30px"></a></div>
+        </div>
+        <div class="login_div_6"><span id="error_tip">使用手机或者邮箱登录</span></div>
+        <form>
+            <div class="login_div_7"><input type="text" placeholder="&nbsp;注册邮箱或者手机号码" class="login_textfiled"></div>
+            <div class="login_div_7"><input type="password" placeholder="&nbsp;输入密码" class="login_textfiled"></div>
+            <div class="login_div_8"><input type="submit" value="登录" id="login_button"></div>
+        </form>
+        <div class="login_div_9">
+            <div class="login_div_9left"><span><a href="findpassword.html">忘记密码>></a></span></div>
+            <div class="login_div_9right"><span><a href="regist.html">立即注册</a></span></div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+
+	<div class="footerbottom">
+		<div class="promise">
+			<div class="center-content clearfix">
+				<div class="left">
+					<span class="iconfont rgbf">&#xe611;</span>
+					<span class="red">100%</span>
+					<span class="rgbf">品牌授权正品</span>
+				</div>
+				<div class="left">
+					<span class="iconfont rgbf">&#xe664;</span>
+					<span class="red">7天</span>
+					<span class="rgbf">无理由退换货</span>
+				</div>
+				<div class="right">
+					<span class="iconfont rgbf">&#xe6af;</span>
+					<span class="rgbf">客服电话：</span>
+					<span class="red">888-888-9888</span>
+					&nbsp;&nbsp;
+					<span class="rgb9">08:88-88:88(周一至周日)</span>
+					&nbsp;&nbsp;
+					<a href="#" style="text-decoration:none;"><span class="red">在线客服</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-help">
+			<div class="center-content clearfix">
+				<div class="left">
+					<ul class="clearfix">
+
+						<li class="left">
+							<p>
+								<span>使用指南</span>
+							</p>
+							<p>
+								<a href="" target="_blank">注册登录</a>
+							</p>
+							<p>
+								<a href="" target="_blank">选购商品</a>
+							</p>
+							<p>
+								<a href="" target="_blank">结算支付</a>
+							</p>
+							<p>
+								<a href="" target="_blank">收货退货</a>
+							</p>
+						</li>
+						<li class="left">
+							<p>
+								<span>会员中心</span>
+							</p>
+							<p>
+								<a href="" target="_blank">我的订单</a>
+							</p>
+							<p>
+								<a href="" target="_blank">我的收藏</a>
+							</p>
+							<p>
+								<a href="" target="_blank">信息管理</a>
+							</p>
+							<p>
+								<a href="" target="_blank">账户管理</a>
+							</p>
+						</li>
+						<li class="left">
+							<p>
+								<span>寄售指南</span>
+							</p>
+							<p>
+								<a href="" target="_blank">如何寄售</a>
+							</p>
+							<p>
+								<a href="" target="_blank">收货方式</a>
+							</p>
+							<p>
+								<a href="" target="_blank">定价上架</a>
+							</p>
+							<p>
+								<a href="" target="_blank">闲置变现</a>
+							</p>
+						</li>
+						<li class="left">
+							<p>
+								<span>配送方式</span>
+							</p>
+							<p>
+								<a href="" target="_blank">配送时间</a>
+							</p>
+							<p>
+								<a href="" target="_blank">配送范围</a>
+							</p>
+							<p>
+								<a href="" target="_blank">顺丰速运</a>
+							</p>
+							<p>
+								<a href="" target="_blank">商品验收与签收</a>
+							</p>
+						</li>
+						<li class="left">
+							<p>
+								<span>售后服务</span>
+							</p>
+							<p>
+								<a href="" target="_blank">退换货</a>
+							</p>
+							<p>
+								<a href="" target="_blank">退款政策</a>
+							</p>
+							<p>
+								<a href="" target="_blank">中止寄售</a>
+							</p>
+							<p>
+								<a href="" target="_blank">投诉建议</a>
+							</p>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-link">
+			<div class="center-content clearfix">
+
+				<div class="left about-us">
+					<p>
+						<a href="index.html">返回首页</a>
+						<span>|</span>
+						<a href="">公司概况</a>
+						<span>|</span>
+						<a href="">联系我们</a>
+						<span>|</span>
+						<a href="">加入我们</a>
+						<span>|</span>
+						<a href="">商务合作</a>
+						<span>|</span>
+						<a href="">隐私条款</a>
+						<span>|</span>
+						<a href="">友情链接</a>
+					</p>
+					<p>
+						CopyRight ? 2016-2016 北京灵悦天下科技有限公司
+						<a class="rbg6" href="http://www.miibeian.gov.cn/" style="text-decoration:none;"  target="_blank">京ICP证8888888号 京ICP备8888889号</a>
+						经营许可证编号：京88-8888-88
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="return-top hide">
+		<span class="iconfont">&#xe610;</span>
+	</div>
+</div>
+</body>

@@ -1,8 +1,8 @@
-﻿<!DOCTYPE>
+﻿<!DOCTYPE html>
 <html>
 <head>
 
-<title>TXTBaba | 商品详情页面</title>
+<title>TXTBaba | 用户中心</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -157,139 +157,72 @@ $(document).ready(function(){
         </div>
     </div>
 </div>
+<div class="container">
+    <div id="user_left_div">
+        <dt id="left_head"><a href="user_center.html" style="color: inherit">用户中心</a>
+        <dd><dt>订单中心
+        <dd><a href="" style="color: black;font-size: 14px">我的订单</a></dd>
+        <dd><a href="" style="color: black;font-size: 14px">我的退换货</a></dd>
+        <dd><a href="" style="color: black;font-size: 14px">我的收藏</a></dd>
+        </dt>
+        </dd>
+        <dd>
+        <dt>服务中心
+        <dd><a href="" style="color: black;font-size: 14px">我的咨询</a></dd>
+        <dd><a href="" style="color: black;font-size: 14px">我的评价</a></dd>
+        <dd><a href="" style="color: black;font-size: 14px">我的分享</a></dd>
+        </dt>
+        </dd>
+        <dd><dt>账户管理
+        <dd><a href="" style="color: black;font-size: 14px">我的优惠券</a></dd>
+        <dd><a href="Account.html" style="color: black;font-size: 14px">我的钱包</a></dd>
+        <dd><a href="" style="color: black;font-size: 14px">修改个人资料</a></dd>
+        <dd><a href="address_manage.html" style="color: black;font-size: 14px">管理收货地址</a></dd>
+        </dt>
+        </dd>
 
-<div class="itm-wrap">
-    <div class="row" id="shop-product-details">
-        <div class="itm-returnlist"><a href="../comp/product.html">« Return to list</a>
-        </div>
-        <div class="row">
-            <div class="itm-column-left">
-                <div id="thumbselect" class="itm-thumbnails">
-                    <div id="thumb1" class="itm-thumbnail-selected"><img src="images/thumb1.jpg" onclick="select('images/large1.jpg','thumb1')">
-                    </div>
-                    <div id="thumb2" class="itm-thumbnail"><img src="images/thumb2.jpg" onclick="select('images/large2.jpg','thumb2')">
-                    </div>
-                    <div id="thumb3" class="itm-thumbnail"><img src="images/thumb3.jpg" onclick="select('images/large3.jpg','thumb3')">
-                    </div>
-                    <div id="thumb4" class="itm-thumbnail"><img src="images/thumb4.jpg" onclick="select('images/large4.jpg','thumb4')">
-                    </div>
-                </div>
-                <div class="itm-displayphoto">
-                    <div id="largedisplay"><img  id="photodisplay" src="images/large1.jpg">
-                    </div>
-                    <a id="retinaphoto" href="images/retina1.jpg" title="Enlarge" target="_blank" class="enlargeicon"></a>
-                    <div class="itm-zoom" style="background-image: url(images/large1.jpg); background-position: 100% 100%;"
-                    >
-                    </div>
+        </dt>
+    </div>
+    <div id="user_right_div">
+        <div id="user_right_div1"><h2 style="font-weight: 500">管理收货地址</h2></div>
+        <div id="user_right_div2" style="height: auto">
+            <div class="address_add">
+                <input type="button" value="添加新的收货地址" id="address_button">
+                <div class="add_tip">您已添加&nbsp;<span style="color: red;font-size: 10px">3</span>个收货地址，最多可以添加10个收货地址</div>
+            </div>
+            <div class="address_info">
+                <div class="info_main">
+                    <div class="info_name"></div><div class="info_zone"></div>
+                    <div class="info_div"><div class="info_head_head"><span>收货人:&nbsp;</span></div><span id="receiver_name">颜小松</span></div>
+                    <div class="info_div"><div class="info_head_head"><span>收货地址:&nbsp;</span></div><span id="receiver_address">重庆市南岸区巴拉巴拉巴拉巴拉小魔仙</span></div>
+                        <div class="info_div"><div class="info_head_head"><span>手机号码:&nbsp;</span></div><span id="receiver_cellphone">18602354524</span></div>
+                    <div class="info_div"><div class="info_head_head"><span>固定电话:&nbsp;</span></div><span id="receiver_telephone"></span></div>
+                    <div class="info_div"><div class="info_head_head"><span>邮政编码:&nbsp;</span></div><span id="receiver_uid"></span></div>
                 </div>
             </div>
-            <div class="itm-column-right">
-                <div class="itm-primary">
-                    <div class="itm-brandlogo"><a href="#"><img src="images/JCrew_sm.png"></a>
-                    </div>
-                    <h1 class="itm-title">J. Crew Cocktail Dress</h1>
-                    <div class="itm-price">
-                        <span>$</span>
-                        <span>46.49</span>
-                    </div>
-                    <div class="itm-compare-price">
-                        <span>原价 $ </span>
-                        <span>888.86 </span>
-                    </div>
-                    <div class="itm-savingper">
-                        <span>您节省了</span>
-                        <span>99</span>
-                        <span>%</span>
-                    </div>
-                    <div class="itm-divider1">
-                    </div>
-                    <a href="#">
-                        <div class="itm-brand-name">J.Crew
-                        </div>
-                    </a>
-                    <div class="itm-size">Size 8</div>
-                    <div class="itm-addtocart">Add to cart</div>
+            <div class="address_info">
+                <div class="info_main">
+                    <div class="info_name"></div><div class="info_zone"></div>
+                    <div class="info_div"><div class="info_head_head"><span>收货人:&nbsp;</span></div><span id="receiver_name">颜小松</span></div>
+                    <div class="info_div"><div class="info_head_head"><span>收货地址:&nbsp;</span></div><span id="receiver_address">重庆市南岸区巴拉巴拉巴拉巴拉小魔仙</span></div>
+                    <div class="info_div"><div class="info_head_head"><span>手机号码:&nbsp;</span></div><span id="receiver_cellphone">18602354524</span></div>
+                    <div class="info_div"><div class="info_head_head"><span>固定电话:&nbsp;</span></div><span id="receiver_telephone"></span></div>
+                    <div class="info_div"><div class="info_head_head"><span>邮政编码:&nbsp;</span></div><span id="receiver_uid"></span></div>
                 </div>
-                <div class="itm-detailtext">
-                    <div class="itm-divider2"></div>
-                    <div class="itm-delivery">
-                        <strong>包邮标准:</strong>
-                        <span>满</span>
-                        <span>666</span>
-                    </div>
-                    <div class="itm-return">
-                        <strong>退货标准:</strong>
-                        <span>7</span>
-                        <span>天内</span>
-                    </div>
-                    <div class="itm-divider3"></div>
-                    <div class="itm-user-rating">
-                        <strong>
-                            <span>用户对</span>
-                            <span>J.Crew Cocktail Dress</span>
-                            <span>的评分</span>
-                        </strong>
-                        <div class="itm-stars">
-                        </div>
-                    </div>
-                    <div class="itm-divider2"></div>
-                    <div>
-                        <div class="itm-description">
-                            <strong>平台描述:</strong>
-                            <ul>
-                                <li>无背带</li>
-                                <li>灰色</li>
-                                <li>全新、无使用痕迹</li>
-                                <li>只可干洗</li>
-                            </ul>
-                            <strong>卖家描述:</strong>
-                            <ul>
-                                <li>萌</li>
-                                <li>但是没我萌</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <strong>尺寸参数:</strong>
-                                <ul>
-                            <span>胸围888, &nbsp</span>
-                            <span>长度666</span>
-                                </ul>
-                        </div>
-                        <div>
-                            <strong>材料:</strong>
-                                <ul>
-                            <span>100% 棉</span>
-                                </ul>
-                        </div>
-                        <div>
-                            <strong>注意事项:</strong>
-                            <ul>
-                                <li>
-                                    <span>商品编号: </span>
-                                    <span>8888-8888</span>
-                                </li>
-                                <li> 100%正品保证 </li>
-                                <li> 该商品在平台上仅此一件 </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <strong>退货政策:</strong>
-                                <ul>
-                            <span>支持标准退货流程.</span>
-                            <span><a class="itm-alternatives" href="#">Details.</a></span>
-                                </ul>
-                        </div>
-                        <div class="itm-sellercloset">
-                            <a href="#" title="View more items from this seller" style="text-decoration:underline;">查看该卖家的其他商品.</a>
-                        </div>
-                    </div>
-                    <div class="itm-divider4"></div>
+            </div>
+            <div class="address_info">
+                <div class="info_main">
+                    <div class="info_name"></div><div class="info_zone"></div>
+                    <div class="info_div"><div class="info_head_head"><span>收货人:&nbsp;</span></div><span id="receiver_name">颜小松</span></div>
+                    <div class="info_div"><div class="info_head_head"><span>收货地址:&nbsp;</span></div><span id="receiver_address">重庆市南岸区巴拉巴拉巴拉巴拉小魔仙</span></div>
+                    <div class="info_div"><div class="info_head_head"><span>手机号码:&nbsp;</span></div><span id="receiver_cellphone">18602354524</span></div>
+                    <div class="info_div"><div class="info_head_head"><span>固定电话:&nbsp;</span></div><span id="receiver_telephone"></span></div>
+                    <div class="info_div"><div class="info_head_head"><span>邮政编码:&nbsp;</span></div><span id="receiver_uid"></span></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <div class="footer">
 
     <div class="footerbottom">
