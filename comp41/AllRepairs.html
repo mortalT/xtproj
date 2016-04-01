@@ -1,0 +1,516 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<title>TXTBaba | 用户中心</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	<!--
+    $('#lpfl').mouseover(function(){
+		$('.products-list').css('display','inline-block');
+			$('#lpfl').mouseout  (function(){
+		$('.products-list').hide();
+		})
+	})
+   -->
+	$('.yohogroup').mouseover(function(){
+		$(this).css('color','#000')})
+			$('.yohogroup').mouseout(function(){
+		$(this).css('color','#9196a0')})
+
+})
+</script>
+<script type="text/javascript">
+    function dropshow(){
+        $('.products-list').css('display','block');
+    }
+    function drophide(){
+        $('.products-list').css('display','none');
+    }
+</script>
+    <script type="text/javascript">
+        function select(s,t){
+            $("#photodisplay")[0].src=s;
+            $('.itm-thumbnail-selected')[0].className="itm-thumbnail";
+            $('#'+t)[0].className="itm-thumbnail-selected";
+
+
+            var id = $('.itm-thumbnail-selected').attr('id');
+            var idNum = id.charAt(id.length - 1);
+            var p = 'images/retina' + idNum + '.jpg';
+            $("#retinaphoto")[0].href = (p);
+        }
+    </script>
+</head>
+
+<body>
+<div class="header">
+        <div class="header-topwrapper">
+            <div class="header-top">
+                <div id="dropcontrol" onmouseover="dropshow()" onmouseout="drophide()">
+                <div id="lpfl" class="leftpart float-left">
+                    <span class="icon-hamburger"></span>
+                    <a href="" class="headertext" >TXT</a>
+                    <ul id="prolist" class="products-list" >
+                        <li class="products-item">
+                            <a href="" class="yohogroup" en="TXT1" cn="Mortal1">Dominating</a>
+                        </li>
+                        <li class="products-item">
+                            <a href="" class="yohogroup" en="TXT2" cn="Mortal2">Godlike</a>
+                        </li>
+                        <li class="products-item">
+                            <a href="" class="yohogroup" en="TXT3" cn="Mortal3">Legendary</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                <div class="rightpart">
+                    <div id="loginBox" class="float-left">
+                        <span class="hi">Hi~</span>
+                        <a href="login.html" class="loginbar">[请登录]</a>
+                        <a href="register.html" class="registbar">[免费注册]</a>
+                    </div>
+                    <div class="tag-list-wrapper">
+                        <ul class="tag-list">
+                            <li class="tag-item myyoho" id="myYohoBox">
+                                <span class="tag-seprate"></span>
+                                <a href="user_center.html">MY TXT</a>
+                                <span class="icon-bottomarrow"></span>
+                                <div class="myyoho-info"></div>
+                            </li>
+                            <li class="tag-item myorder">
+                                <span class="tag-seprate"></span>
+                                <span class="icon-papers"></span>
+                                <a href="">我的订单</a>
+                            </li>
+                            <li class="tag-item mycollect">
+                                <span class="tag-seprate"></span>
+                                <span class="icon-heart"></span>
+                                <a href="">我的收藏</a>
+                            </li>
+                            <li class="tag-item message">
+                                <span class="tag-seprate"></span>
+                                <span class="icon-mail"></span>
+                                <a href="">消息</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="top-second-nav">
+    <div class="tnav-logocontainer">
+        <a class="tnav-logo" href="index.html" id="tnav_logo"></a>
+        <div class="tnav-search">
+            <div class="tnav-searcharea" id="tnav_searcharea">
+                <div class="tnav-search input free-search">
+                    <input class="search-input" data-department="department" data-original_search="search" placeholder="Search 各种各样的东西" type="text">
+                    <ul class="search-ul-results"></ul>
+                    <span class="icon-small-search"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tnav-navigation" id="tnav_navigation">
+        <div class="tnav-nav-tabcontainer">
+                <div class="tnav-onetab">
+                    <a href="product.html" title="提款姬">LEBLANC</a>
+                </div>
+                <div class="tnav-onetab">
+                    <a href="product.html" title="托儿索">YASUO</a>
+                </div>
+                <div class="tnav-onetab">
+                    <a href="product.html" title="小学僧">LEE SIN</a>
+                </div>
+                <div class="tnav-onetab">
+                    <a href="product.html" title="喜之螂">KHA'ZIX</a>
+                </div>
+                <div class="tnav-onetab">
+                    <a href="product.html" title="橡皮妮">ANNIE</a>
+                </div>
+                <div class="tnav-onetab">
+                    <a href="product.html" title="董存锐">RIVEN</a>
+                </div>
+                <div class="tnav-onetab">
+                    <a href="product.html" title="儿童劫">ZED</a>
+                </div>
+				<div class="tnav-onetab">
+                    <a href="product.html" title="钙中盖">GAREN</a>
+                </div>
+			<div class="tnav-tab-sell">
+                <div class="tnav-onetab-sell">
+                    <a href="#" title="卖队友" style="color:#00b285;")>SELL</a>
+                </div>
+                <div class="tnav-onetab-sell">
+                    <a href="index.html" title="中推">MID OPEN!</a>
+                </div>
+			</div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div id="user_left_div">
+        <dt id="left_head"><a href="user_center.html" style="color: inherit">用户中心</a>
+        <dd><dt>订单中心
+        <dd><a href="my_list.html" >我的订单</a></dd>
+        <dd><a href="AllRepairs.html" >我的退换货</a></dd>
+        <dd><a href="" >我的收藏</a></dd>
+        </dt>
+        </dd>
+        <dd>
+        <dt>服务中心
+        <dd><a href="" >我的咨询</a></dd>
+        <dd><a href="" >我的评价</a></dd>
+        <dd><a href="" >我的分享</a></dd>
+        </dt>
+        </dd>
+        <dd><dt>账户管理
+        <dd><a href="" >我的优惠券</a></dd>
+        <dd><a href="Account.html" >我的钱包</a></dd>
+        <dd><a href="" >修改个人资料</a></dd>
+        <dd><a href="address_manage.html">管理收货地址</a></dd>
+        </dt>
+        </dd>
+
+        </dt>
+    </div>
+    <div id="user_right_div">
+        <div id="user_right_div1"><h2 style="font-weight: 500">返修退换货</h2></div>
+        <div id="user_right_div2" style="height: auto">
+            <div class="repair_main" >
+                <div class="repair_head">
+                    <div class="repair_head_ul">
+                        <ul class="repair_list">
+                            <li class="repair_li">申请返修/退换货</li>
+                            <li class="repair_li">返修/退换货记录</li>
+                            <li class="repair_li">退款明细</li>
+                            <li class="repair_li">维修费明细</li>
+                        </ul>
+                    </div>
+                    <div class="repair_search_btn">
+                        <input type="text" placeholder="商品名称、订单编号"><input type="button" value="查询">
+                    </div>
+                </div>
+                <div class="main">
+                    <tbody></tbody>
+                    <table class="tb_void">
+                        <colgroup>
+                            <col width="110px">
+                            <col width="">
+                            <col width="100px">
+                            <col width="220px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>订单编号</th>
+                                <th>订单商品</th>
+                                <th></th>
+                                <th>
+                                    <select>
+                                        <option value="0">下单时间</option>
+                                        <option value="1">最近三个月</option>
+                                        <option value="2">三个月以前</option>
+                                    </select>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="">1454846548</a></td>
+                            <td>
+                                <div class="list_h">
+                                    <div>
+                                        <div class="p_img"></div>
+                                    </div>
+                                    <div class="p_msg"><a href="">宏碁（acer）S230HL Bbd 23英寸LED背光宽屏液晶显示器</a></div>
+                                    <div><input type="button" value="申请" class="btn"></div>
+                                </div>
+                            </td>
+                            <td><img src="images/weichat.jpg" style="width: 20px;height: 20px"></td>
+                            <td><span>2016-03-14 20:16</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">1454846548</a></td>
+                            <td>
+                                <div class="list_h">
+                                    <div>
+                                        <div class="p_img"></div>
+                                    </div>
+                                    <div class="p_msg"><a href="">宏碁（acer）S230HL Bbd 23英寸LED背光宽屏液晶显示器</a></div>
+                                    <div><input type="button" value="申请" class="btn"></div>
+                                </div>
+                            </td>
+                            <td><img src="images/weichat.jpg" style="width: 20px;height: 20px"></td>
+                            <td><span>2016-03-14 20:16</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">1454846548</a></td>
+                            <td>
+                                <div class="list_h">
+                                    <div>
+                                        <div class="p_img"></div>
+                                    </div>
+                                    <div class="p_msg"><a href="">宏碁（acer）S230HL Bbd 23英寸LED背光宽屏液晶显示器</a></div>
+                                    <div><input type="button" value="申请" class="btn"></div>
+                                </div>
+                            </td>
+                            <td><img src="images/weichat.jpg" style="width: 20px;height: 20px"></td>
+                            <td><span>2016-03-14 20:16</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div calss="repair_page" style="display: none">
+                <form name="applyAfsForm" autocomplete="off">
+                    <div class="mod_main mod_comm">
+                        <div class="mt">
+                            <h3>申请售后</h3>
+                            <div class="extra_r">
+                                <a href="" class="repair_btn_red">售后政策</a>
+                                <a href="" class="repair_btn_red">联系客服</a>
+                            </div>
+                        </div>
+                        <div class="mc">
+                            <table class="tb_void">
+                                <thead>
+                                <tr>
+                                    <th width="260">商品名称</th>
+                                    <th width="280">包装清单</th>
+                                    <th width="170">赠送清单</th>
+                                    <th width="105">购买数量</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <ul class="list_proinfo">
+                                                <li>
+                                                    <img src="">
+                                                    <div class="p_info">
+                                                        <a href="">宏碁（acer）S230HL Bbd 23英寸LED背光宽屏液晶显</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <div class="col2">显示器主机*1、底座*1、电源*1、VGA cable*1、质保书、说明书</div>
+                                        </td>
+                                        <td>-</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="form">
+                            <div class="repair_steps">
+                                <div class="repair_step repair_step_curr">
+                                    <div class="item">
+                                        <span class="label">
+                                            <em>*</em>
+                                            服务类型：
+                                        </span>
+                                        <div class="fl">
+                                            <ul class="list_type list_type_new">
+                                                <li id="1" name="applyType">
+                                                    <a href="">退货<b></b></a>
+                                                </li>
+                                                <li id="2" name="applyType">
+                                                    <a href="">换货<b></b></a>
+                                                </li>
+                                                <li id="3" name="applyType">
+                                                    <a href="">维修<b></b></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="clr"></div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="label">
+                                            <em>*</em>
+                                            内容描述：
+                                        </span>
+                                        <div class="fl">
+                                            <textarea class="area"></textarea>
+                                            <div class="area_tip">10-500字</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="repair_submit_btn_div">
+                                            <a href="">申请</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+
+    <div class="footerbottom">
+        <div class="promise">
+            <div class="center-content clearfix">
+                <div class="left">
+                    <span class="iconfont rgbf">&#xe611;</span>
+                    <span class="red">100%</span>
+                    <span class="rgbf">品牌授权正品</span>
+                </div>
+                <div class="left">
+                    <span class="iconfont rgbf">&#xe664;</span>
+                    <span class="red">7天</span>
+                    <span class="rgbf">无理由退换货</span>
+                </div>
+                <div class="right">
+                    <span class="iconfont rgbf">&#xe6af;</span>
+                    <span class="rgbf">客服电话：</span>
+                    <span class="red">888-888-9888</span>
+                    &nbsp;&nbsp;
+                    <span class="rgb9">08:88-88:88(周一至周日)</span>
+                    &nbsp;&nbsp;
+					<a href="#" style="text-decoration:none;"><span class="red">在线客服</span></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-help">
+            <div class="center-content clearfix">
+                <div class="left">
+                    <ul class="clearfix">
+
+                        <li class="left">
+                            <p>
+                                <span>使用指南</span>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">注册登录</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">选购商品</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">结算支付</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">收货退货</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <p>
+                                <span>会员中心</span>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">我的订单</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">我的收藏</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">信息管理</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">账户管理</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <p>
+                                <span>寄售指南</span>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">如何寄售</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">收货方式</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">定价上架</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">闲置变现</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <p>
+                                <span>配送方式</span>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">配送时间</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">配送范围</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">顺丰速运</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">商品验收与签收</a>
+                            </p>
+                        </li>
+                        <li class="left">
+                            <p>
+                                <span>售后服务</span>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">退换货</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">退款政策</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">中止寄售</a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank">投诉建议</a>
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-link">
+            <div class="center-content clearfix">
+
+                <div class="left about-us">
+                    <p>
+                        <a href="index.html">返回首页</a>
+                        <span>|</span>
+                        <a href="">公司概况</a>
+                        <span>|</span>
+                        <a href="">联系我们</a>
+                        <span>|</span>
+                        <a href="">加入我们</a>
+                        <span>|</span>
+                        <a href="">商务合作</a>
+                        <span>|</span>
+                        <a href="">隐私条款</a>
+                        <span>|</span>
+                        <a href="">友情链接</a>
+                    </p>
+                    <p>
+                        CopyRight ? 2016-2016 北京灵悦天下科技有限公司
+                        <a class="rbg6" href="http://www.miibeian.gov.cn/" style="text-decoration:none;"  target="_blank">京ICP证8888888号 京ICP备8888889号</a>
+                        经营许可证编号：京88-8888-88
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="return-top hide">
+        <span class="iconfont">&#xe610;</span>
+    </div>
+</div>
+</body>
